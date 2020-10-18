@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+
+package proto;
+
+message Request {
+    string empid = 6;
+    string name = 1;
+    string dob = 2;
+    string salary = 3;
+    int32 age = 4;
+    string filetype = 5;
+}
+
+message Response {
+    string response = 2;
+}
+
+service storeData {
+    rpc Add(Request) returns (Response);
+}
